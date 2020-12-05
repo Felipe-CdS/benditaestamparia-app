@@ -3,6 +3,7 @@ import axios from 'axios'
 
 import StoreHeader from '../../components/storeComponents/StoreHeader'
 import Product from '../../components/storeComponents/Product'
+import PlaceholderLoading from '../../components/storeComponents/PlaceholderLoading'
 
 import './styles.css'
 
@@ -11,6 +12,7 @@ class StoreCategory extends React.Component {
     state = {
         apiString: "https://benditaestamparia-api.herokuapp.com/api/products",
         pageContent: [],
+        productList: [],
         categoryName: ""
     }
 
@@ -24,32 +26,33 @@ class StoreCategory extends React.Component {
         this.state.categoryName = this.state.categoryName.charAt(0).toUpperCase() + this.state.categoryName.slice(1);
         this.state.categoryName = this.fixWriting(this.state.categoryName);
 
+        
         this.requestApi(location, this.state.apiString);
+        this.state.productList = [<PlaceholderLoading />];
     }
 
     async requestApi(apiString) {
         var result = await axios.get(apiString).then(resp => resp.data);        
         this.setState({pageContent: result});
+        this.setState({productList: []});
     }
 
     render(){
-        var productList = [];
-
         (this.state.pageContent).map((data) => {
             data.price = parseFloat(data.price).toFixed(2);
             let secondPriceCalc = (data.price / 10).toFixed(2);
 
-            productList.push(
-                <a href={`#/store/id/${data.id}`}>
-                    <Product key={data.id} imgsrc={`./Assets/store/product-${data.id}/thumbnail.jpg`} 
+            this.state.productList.push(
+                <a key={data.id} href={`#/store/id/${data.id}`}>
+                    <Product imgsrc={`./Assets/store/product-${data.id}/thumbnail.jpg`} 
                     name={data.name} price={`R$ ${data.price}`} secondPrice={`10x R$ ${secondPriceCalc}`} />
                 </a>
                 );
         });
         
-        if(productList.length == 0){
-            productList.push(
-                <h1 key="0" style={{fontFamily: "'Staatliches', cursive", textAlign: "center", marginBottom: "1rem"}}>
+        if(this.state.productList.length == 0){
+            this.state.productList.push(
+                <h1 style={{fontFamily: "'Staatliches', cursive", textAlign: "center", marginBottom: "1rem"}}>
                     Itens dessa categoria ainda estão Produção. <br/> Fique ligado para novidades em breve!
                 </h1>   
             );
@@ -61,7 +64,7 @@ class StoreCategory extends React.Component {
                 <h1>{this.state.categoryName}</h1>
                 <hr/>
                 <div className="products-grid">
-                    {productList}
+                    {this.state.productList}
                 </div>    
                 <a href="/#/store">Voltar para a loja</a>
             </div>

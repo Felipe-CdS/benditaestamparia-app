@@ -3,6 +3,7 @@ import axios from 'axios'
 
 import StoreHeader from '../../components/storeComponents/StoreHeader'
 import Product from '../../components/storeComponents/Product'
+import PlaceholderLoading from '../../components/storeComponents/PlaceholderLoading'
 
 import './styles.css'
 
@@ -18,7 +19,9 @@ class StoreMainView extends React.Component {
         super(props);
         var location = this.props.location;
         location = this.state.apiString + (location.pathname.replace("/store", ""));
+        
         this.requestApi(location, this.state.apiString);
+        this.state.productList = [<PlaceholderLoading />];
     }
 
     async requestApi(apiString) {
@@ -29,6 +32,7 @@ class StoreMainView extends React.Component {
         }
                
         this.setState({pageContent: result});
+        this.setState({productList: []});
     }
 
     setProductInDisplay(){

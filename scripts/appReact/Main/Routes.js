@@ -8,6 +8,7 @@ import Portifolio from '../views/Portifolio';
 import ContactUs from '../views/ContactUs';
 import StoreCategory from '../views/StoreCategory';
 import ProductPage from '../views/ProductPage';
+import NotFound from '../views/NotFound';
 
 class Routes extends React.Component {
     render(){
@@ -22,6 +23,7 @@ class Routes extends React.Component {
                     <Route exact path="/store/id/:id" component={ProductPage}></Route>
                     <Route exact path="/store" component={StoreMainView} />
                     <Route exact path="/contact-us" component={ContactUs} />
+                    <Route component={NotFound} />
                 </Switch>
             </HashRouter>
         );  
