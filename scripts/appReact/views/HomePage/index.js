@@ -13,7 +13,7 @@ class HomePage extends React.Component {
                     <h1>Cada tela conta uma história.</h1>
 
                     <h2>Nós estampamos para ter o prazer de ouvir cada uma delas.<br/><br/>
-                        <img className="arrow-down" src="Assets/arrow-down-sign-to-navigate.svg"/>
+                        <img className="arrow-down" src="Assets/icons/arrow-down-sign-to-navigate.svg"/>
                     </h2>
                 </div>    
 
@@ -21,7 +21,7 @@ class HomePage extends React.Component {
                     <div className="bg"/>
                     <p>De belas sublimações até estampas feitas com as técnicas de serigrafia mais complexas, tudo feito com o cuidado e precisão que a sua marca precisa.</p>
                     <hr/>
-                    <a href="./portifolio.html">Conheça o nosso trabalho</a>
+                    <a href="#/portifolio">Conheça o nosso trabalho</a>
                 </div>
 
                 <div className="message-container-two">
@@ -34,7 +34,7 @@ class HomePage extends React.Component {
                         Camisas leves com os melhores tecidos, estampas duradouras que não saem na lavagem, tintas com cores brilhantes feitas
                         especificamente para o seu pantone e vários outros detalhes para deixar o seu produto incrível. <br/>
                     </p>
-                    <a href="./contact.html">faça o seu pedido</a>
+                    <a href="#/contact-us">faça o seu pedido</a>
                     </div>
                     <img src="Assets/rodo-photo.jpg"/>
                 </div>

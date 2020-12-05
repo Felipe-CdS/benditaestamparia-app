@@ -33,6 +33,9 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
+            options: {
+              outputPath: './Assets/webback-generated',
+            },
           },
         ],
       },
