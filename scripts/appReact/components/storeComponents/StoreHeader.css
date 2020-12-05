@@ -1,0 +1,88 @@
+.store-header {
+    width: 15%;
+    height: 3rem;
+    border-radius: 0 0  0 2rem;
+
+    display: flex;
+    align-items: flex-start;
+
+    position: absolute;
+    top: 0rem;
+    right: 0;
+    z-index: 2;
+    margin: auto;
+    padding: 0.5rem 1.5rem;
+
+    background-color: black; 
+      
+}
+
+.store-header button {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Cousine', monospace;
+    font-weight: 700;
+    transition: 300ms;
+
+    display: flex;
+    align-items: flex-start;
+}
+
+
+.store-header button:hover {
+    color: #C7A505;
+    text-decoration: underline;
+}
+
+
+.gg-shopping-cart {
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+    transform: scale(var(--ggs,1));
+    width: 3rem;
+    height: 3rem;
+    background:
+        linear-gradient(
+            to left,currentColor 12px,
+            transparent 0)
+            no-repeat -1px 6px/18px 2px,
+        linear-gradient(
+            to left,currentColor 12px,
+            transparent 0)
+            no-repeat 6px 14px/11px 2px,
+        linear-gradient(
+            to left,currentColor 12px,
+            transparent 0)
+            no-repeat 0 2px/4px 2px,
+        radial-gradient(
+            circle,currentColor 60%,
+            transparent 40%)
+            no-repeat 12px 17px/4px 4px,
+        radial-gradient(
+            circle,currentColor 60%,
+            transparent 40%)
+            no-repeat 6px 17px/4px 4px
+}
+.gg-shopping-cart::after,
+.gg-shopping-cart::before {
+    content: "";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    width: 2px;
+    height: 14px;
+    background: currentColor;
+    top: 2px;
+    left: 4px;
+    transform: skew(12deg)
+}
+.gg-shopping-cart::after {
+    height: 10px;
+    top: 6px;
+    left: 16px;
+    transform: skew(-12deg)
+}

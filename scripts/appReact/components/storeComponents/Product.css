@@ -1,0 +1,36 @@
+.product {
+    min-width: 250px;
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+    font-family: 'Mulish', sans-serif;
+    margin-bottom: 10px;
+
+    border: none;
+    background-color: transparent;
+}
+
+.photo {
+    width: 85%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+
+    transition: width .25s, visibility .25s ease-in;
+}
+
+.product:hover {
+    text-decoration: underline;
+}
+
+
+.product:hover .photo {
+    width: 90%;
+    height: 310px;
+}
+
+
