@@ -63,7 +63,7 @@ class StoreCategory extends React.Component {
                 <StoreHeader />
                 <h1>{this.state.categoryName}</h1>
                 <hr/>
-                <div className="products-grid">
+                <div id="products-grid">
                     {this.state.productList}
                 </div>    
                 <a href="/#/store">Voltar para a loja</a>

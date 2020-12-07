@@ -188,14 +188,11 @@ and (max-device-width : 480px) {
 .contact-us-container {
     height: auto;
     width: 100%;
-    top: 5rem;
 
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: flex-start;
-
-    margin-bottom: 5rem;
 }
 
 .contact-us-container hr {
@@ -215,12 +212,9 @@ and (max-device-width : 480px) {
     height: auto;
 }
 
-
 #mapid { 
     border-radius: 0;
 }
-
-
 
 }
 

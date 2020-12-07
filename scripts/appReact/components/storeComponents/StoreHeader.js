@@ -3,7 +3,7 @@ import "./StoreHeader.css";
 
 function StoreHeader() {
     return(
-        <div className="store-header">
+        <div id="store-header">
             <button>Carrinho(0)<i className="gg-shopping-cart"></i></button>
         </div>
     );

@@ -102,16 +102,8 @@ and (min-device-width : 320px)
 and (max-device-width : 480px) {
 /* Styles */
 
-.about-us-container  {
-    top: 5rem;
-}
-
 .about-us-container div h1 {
     font-size: 5rem;
-}
-
-footer {
-    top: 5rem;
 }
 
 }

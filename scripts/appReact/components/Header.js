@@ -27,11 +27,11 @@ class Header extends React.Component {
                 </div>
 
                 <div id="navbar-phone">
-                <a href="./index.html">HOME</a>
-                <a href="./about-us.html">SOBRE-NÓS</a>
-                <a href="./portifolio.html">PORTIFÓLIO</a>
-                <a href="./store.html">LOJA</a>
-                <a href="./contact.html">CONTATO</a>
+                    <a href="#/home">HOME</a>
+                    <a href="#/about-us">SOBRE-NÓS</a>
+                    <a href="#/portifolio">PORTIFÓLIO</a>
+                    <a href="#/store">LOJA</a>
+                    <a href="#/contact-us">CONTATO</a>
                 </div>
             </div>
         );

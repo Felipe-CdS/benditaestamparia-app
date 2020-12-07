@@ -128,8 +128,6 @@ header div a:hover, #navbar-phone a:hover{
 
     font-family: 'Cousine', monospace;
     font-weight: 700;
-
-    border-radius: 0 0 0 2rem;
 }
 
 #navbar-phone a{
@@ -296,8 +294,17 @@ header .logo-img{
 }
 
 #navbar-phone{
+    height: 60vh;
     position: fixed;
     z-index: 2;
+    justify-content: space-around;
+}
+
+#root {
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    top: 5rem;
 }
 
 

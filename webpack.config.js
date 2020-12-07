@@ -4,7 +4,8 @@ module.exports = {
   mode: 'development',
 
   entry: {
-    index: './scripts/index.js'
+    index: './scripts/index.js',
+    phonenavbarController: './scripts/OpenMenu.js'
   },
  
   output: {

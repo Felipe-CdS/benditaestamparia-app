@@ -5,7 +5,7 @@ import './PlaceholderLoading.css'
 function PlaceholderLoading() {
     return(
         <>
-        <div className="lds-ellipsis">
+        <div className="lds-ellipsis"  style={{justifySelf: "end", alignContent: "end"}}>
             <div>
             </div>
             <div>

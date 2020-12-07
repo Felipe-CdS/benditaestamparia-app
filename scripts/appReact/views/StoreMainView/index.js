@@ -43,7 +43,8 @@ class StoreMainView extends React.Component {
             (this.state.productList).push(
                 <a key={data.id} href={`#/store/id/${data.id}`}>
                     <Product imgsrc={`./Assets/store/product-${data.id}/thumbnail.jpg`} 
-                    name={data.name} price={`R$ ${data.price}`} secondPrice={`10x R$ ${secondPriceCalc}`} />
+                    name={data.name} category={`${data.category}`} 
+                    price={`R$ ${data.price}`} secondPrice={`10x R$ ${secondPriceCalc}`} />
                 </a>
                 );
         });
@@ -65,6 +66,7 @@ class StoreMainView extends React.Component {
                         </div>
                     </div>
                     <div className="button-container">
+                        <a href="#/store/category/promocao">Promoção</a>
                         <a href="#/store/category/camisetas">Camisetas</a>
                         <a href="#/store/category/casacos">Casacos</a>
                         <a href="#/store/category/acessorios">Acessórios</a>

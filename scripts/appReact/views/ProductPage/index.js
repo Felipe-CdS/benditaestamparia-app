@@ -35,8 +35,7 @@ class ProductPage extends React.Component {
             <div className="page-container">   
                 <StoreHeader />
                 <div className="product-container">
-                    <div className="photos-container">
-                        <img src={`./Assets/store/product-${this.state.pageContent.id}/thumbnail.jpg`} />
+                    <div id="photos-container" style={{backgroundImage: `url(./Assets/store/product-${this.state.pageContent.id}/thumbnail.jpg)`}}>
                     </div>
                     <div className="product-information">
                         <h1>{this.state.pageContent.name}</h1>
