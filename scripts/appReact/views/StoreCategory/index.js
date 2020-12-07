@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 
 import StoreHeader from '../../components/storeComponents/StoreHeader'
+import Cart from '../../components/storeComponents/Cart'
 import Product from '../../components/storeComponents/Product'
 import PlaceholderLoading from '../../components/storeComponents/PlaceholderLoading'
 
@@ -61,6 +62,7 @@ class StoreCategory extends React.Component {
         return(
             <div className="category-container">   
                 <StoreHeader />
+                <Cart />
                 <h1>{this.state.categoryName}</h1>
                 <hr/>
                 <div id="products-grid">

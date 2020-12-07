@@ -5,7 +5,8 @@ module.exports = {
 
   entry: {
     index: './scripts/index.js',
-    phonenavbarController: './scripts/OpenMenu.js'
+    phonenavbarController: './scripts/OpenMenu.js',
+    cartController: './scripts/CartController.js'
   },
  
   output: {

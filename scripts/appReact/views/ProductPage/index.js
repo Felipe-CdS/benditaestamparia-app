@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 
 import StoreHeader from '../../components/storeComponents/StoreHeader'
+import Cart from '../../components/storeComponents/Cart'
 
 import './styles.css'
 
@@ -34,6 +35,7 @@ class ProductPage extends React.Component {
         return(
             <div className="page-container">   
                 <StoreHeader />
+                <Cart />
                 <div className="product-container">
                     <div id="photos-container">
                         <div className="photo" id="photo-one" style={{backgroundImage: `url(./Assets/store/product-${this.state.pageContent.id}/thumbnail.jpg)`}}/> 

@@ -10,7 +10,6 @@
 
     background-color: #ffffff;
     background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
-
 }
 
 .store-container h1 {
@@ -37,7 +36,6 @@
     justify-content: space-around;
 
     position: relative;
-
 }
 
 #store-navbar h1 {
@@ -96,25 +94,23 @@
 }
 
 #store-navbar a:hover {
- 
     border: 3px solid #C7A505;
     color: #C7A505;
 }
 
 .products-display {
     height: auto;
-    width: 100%;
+    width: 75%;
 
-    min-height: 10rem;
+    padding: 0 3rem;
 
     display: flex;
     
     position: relative;
-    justify-content: center;
+    justify-content: flex-start;
 
     overflow-x: auto;
     font-family: 'Mulish', sans-serif;
-
 }
 
 .products-display a {
@@ -125,7 +121,6 @@
     text-decoration: underline;
     cursor: pointer;
 }
-
 
 /* MEDIA QUERY: */
 
@@ -147,7 +142,6 @@ and (max-device-width : 480px) {
 #banner-scroll h1 {
     font-size: 1.7rem;
 }
-
 
 #store-navbar .button-container {
     width: 100%;

@@ -158,7 +158,7 @@ and (max-device-width : 480px) {
 
 .product-container .product-information {
     width: 100%;
-    height: 100%;
+    height: auto;
 
     display: flex;
     flex-direction: column;
@@ -179,7 +179,7 @@ and (max-device-width : 480px) {
 }
 
 .product-container .product-information input  {
-    width: auto;
+    width: 6rem;
 }
 
 .product-container .product-information div {

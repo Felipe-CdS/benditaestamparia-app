@@ -12,6 +12,6 @@
   \*****************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements:  */
-eval("function openMenu() {\n  var navbarPhoneStyle = document.getElementById(\"navbar-phone\").style.display;\n\n  if (navbarPhoneStyle == \"flex\") {\n    navbarPhoneStyle = \"none\";\n  } else {\n    navbarPhoneStyle = \"flex\";\n  }\n}\n\ndocument.getElementById(\"navbar-phone-button\").addEventListener(\"click\", openMenu);\n\n//# sourceURL=webpack://frontend/./scripts/OpenMenu.js?");
+eval("function openMenu() {\n  var navbarPhoneStyle = document.getElementById(\"navbar-phone\"); //.style.display;\n\n  console.log(navbarPhoneStyle);\n\n  if (navbarPhoneStyle.style.display == \"flex\") {\n    navbarPhoneStyle.style.display = \"none\";\n    document.getElementById(\"store-header\").style.top = \"5rem\";\n  } else {\n    navbarPhoneStyle.style.display = \"flex\";\n    document.getElementById(\"store-header\").style.top = \"calc(60vh + 5rem)\";\n  }\n}\n\ndocument.getElementById(\"navbar-phone-button\").addEventListener(\"click\", openMenu);\n\n//# sourceURL=webpack://frontend/./scripts/OpenMenu.js?");
 /******/ })()
 ;

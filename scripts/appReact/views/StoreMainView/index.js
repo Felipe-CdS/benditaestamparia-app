@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 
 import StoreHeader from '../../components/storeComponents/StoreHeader'
+import Cart from '../../components/storeComponents/Cart'
 import Product from '../../components/storeComponents/Product'
 import PlaceholderLoading from '../../components/storeComponents/PlaceholderLoading'
 
@@ -27,7 +28,7 @@ class StoreMainView extends React.Component {
     async requestApi(apiString) {
         var result = [];
 
-        for(var x = 1; x < 6; x++){
+        for(var x = 1; x < 7; x++){
             result.push(await axios.get(apiString + x).then(resp => resp.data)); 
         }
                
@@ -57,6 +58,7 @@ class StoreMainView extends React.Component {
         return(
             <div className="store-container">   
                 <StoreHeader />
+                <Cart />
 
                 <div id="store-navbar">
                     <div id="banner-scroll">
