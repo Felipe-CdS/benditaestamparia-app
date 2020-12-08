@@ -5,7 +5,7 @@ class Header extends React.Component {
         return(
             <div>
                 <header>
-                <a className="logo-img"><img src="Assets/logo-test.png"/></a>
+                <a href="#/home" className="logo-img"><img src="Assets/logo-test.png"/></a>
 
                 <div id="navbar-pc">
                     <a href="#/home">HOME</a>

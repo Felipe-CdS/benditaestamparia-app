@@ -9,7 +9,8 @@ class ContactUs extends React.Component {
                     <div className="left-side">
                         <h1>Nos mande a sua ideia:</h1>
 
-                        <form id="entries-form" name="contact" method="POST" data-netlify="true">
+                        <form name="contact" method="post">
+                            <input type="hidden" name="form-name" value="contact" />
                             <div className="name-container">
                                 <div>
                                     <label htmlFor="fname">Nome: *</label>
