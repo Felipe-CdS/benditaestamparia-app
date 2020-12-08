@@ -62,7 +62,7 @@ class Cart extends React.Component {
             <span>Total: R$ {this.totalCalcFunction()}</span>
 
             <button id="continue-buying">Continuar comprando</button>
-            <button id="finish-buying">Finalizar compra</button>
+            <a id ="finish-buying" href="#/finish-buying">Finalizar compra</a>
 
             </div>
         );

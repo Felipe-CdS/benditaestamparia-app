@@ -27,6 +27,12 @@ export default (state = initialState, action) => {
                 return { ...state, cartArray: [...state.cartArray, action.payload] }
             }
 
+        case 'REMOVE_PRODUCT':
+                var x = [   ...state.cartArray.slice(0, action.payload),
+                            ...state.cartArray.slice(action.payload + 1) ];
+
+                return { ...state, cartArray: [...x] }
+
         default:
             return state
     }

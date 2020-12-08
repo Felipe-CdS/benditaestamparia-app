@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { connect } from 'react-redux'
-import appActions from '../../../ReduxScripts/appActions'
+import { addProduct } from '../../../ReduxScripts/appActions'
 
 import StoreHeader from '../../components/storeComponents/StoreHeader'
 import Cart from '../../components/storeComponents/Cart'
@@ -38,7 +38,7 @@ class ProductPage extends React.Component {
             size: "M" 
         };
 
-        this.props.dispatch(appActions.addProduct(newProduct));
+        this.props.dispatch(addProduct(newProduct));
     }
 
     componentDidMount(){

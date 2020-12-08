@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { removeProduct } from '../../../ReduxScripts/appActions'
 
 import './ProductCartCard.css'
 
@@ -13,12 +14,25 @@ class ProductCartCard extends React.Component {
         return (this.props.products[this.props.index].price * this.props.products[this.props.index].quantity).toFixed(2);
     }
 
+    
+    removeProduct() {
+        this.props.dispatch(removeProduct(this.props.index));
+    }
+
+    componentDidMount(){
+        document.getElementById(`remove-${this.props.index}`).addEventListener("click", () => this.removeProduct());
+    }
+
     render(){
 
         return(
         <div className="ProductCartCard">
-            <span>{this.props.products[this.props.index].quantity}x {this.props.products[this.props.index].name}</span>
+            <div>   
+                <span>{this.props.products[this.props.index].quantity}x {this.props.products[this.props.index].name}</span>
+                <button id={`remove-${this.props.index}`} >Remover</button>
+            </div>
             <span>R$ {this.subtotalCalcFunction()}</span>
+            
         </div>
         );
     }

@@ -62,7 +62,7 @@
     width: 100%;
     height: auto;
     padding: 0.5rem;
-
+ 
     border: solid 3px #000000; 
     background: transparent;
 
@@ -72,6 +72,10 @@
     transition: 400ms;
 
     margin-top: 1rem;
+
+    text-decoration: none;
+    text-align: center;
+    color: black;
 }
 
 #finish-buying:hover, #close-cart-button:hover, #continue-buying:hover{
