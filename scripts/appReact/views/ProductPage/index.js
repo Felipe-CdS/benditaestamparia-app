@@ -1,5 +1,7 @@
 import React from 'react'
 import axios from 'axios'
+import { connect } from 'react-redux'
+import appActions from '../../../ReduxScripts/appActions'
 
 import StoreHeader from '../../components/storeComponents/StoreHeader'
 import Cart from '../../components/storeComponents/Cart'
@@ -27,6 +29,22 @@ class ProductPage extends React.Component {
         this.setState({pageContent: result});
     }
 
+    addProduct() {
+        var newProduct = { 
+            productId: this.state.pageContent.id, 
+            name: this.state.pageContent.name,
+            price: this.state.pageContent.price,
+            quantity: parseInt(document.getElementById("quantity-input").value), 
+            size: "M" 
+        };
+
+        this.props.dispatch(appActions.addProduct(newProduct));
+    }
+
+    componentDidMount(){
+       document.getElementById("addToCartButton").addEventListener("click", () => this.addProduct());
+    }
+
 
     render(){
         this.state.pageContent.price = parseFloat(this.state.pageContent.price).toFixed(2);
@@ -46,8 +64,8 @@ class ProductPage extends React.Component {
                         <h3>{`R$ ${this.state.pageContent.price}`}</h3>
                         <h5>{`10x R$ ${secondPriceCalc}`}</h5>
                         <div>
-                            <input type="number" id="quantity" step="1" min="1" max="100" defaultValue="1" name="product_quantity"/>
-                            <a>INCLUIR NO CARRINHO</a>
+                            <input type="number" id="quantity-input" step="1" min="1" max="100" defaultValue="1" name="product_quantity"/>
+                            <button id="addToCartButton">INCLUIR NO CARRINHO</button>
                         </div>
                         
                         <a href="/#/store">Voltar para a loja</a>
@@ -58,4 +76,4 @@ class ProductPage extends React.Component {
     }
 }
 
-export default ProductPage;
+export default connect()(ProductPage);

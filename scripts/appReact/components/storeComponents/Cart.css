@@ -2,7 +2,7 @@
     display: none;
     flex-direction: column;
     height: auto;
-    width: 35vw;
+    min-width: 40vw;
     background-color: #ffffff;
 
     position: absolute;
@@ -16,7 +16,7 @@
     box-shadow: -8px 0px 100px #000000;
 
     animation-name: cart-animation;
-    animation-duration: 500ms;
+    animation-duration: 700ms;
 }
 
 #cart-container div{
@@ -36,6 +36,12 @@
     margin: 0.5rem 0 1rem;
 }
 
+#cart-container .productsList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 #close-cart-button{
     width: auto;
@@ -52,7 +58,7 @@
 
 }
 
-#finish-buying{
+#finish-buying, #continue-buying{
     width: 100%;
     height: auto;
     padding: 0.5rem;
@@ -64,9 +70,11 @@
     font-weight: 700;
     font-size: 1.5rem;
     transition: 400ms;
+
+    margin-top: 1rem;
 }
 
-#finish-buying:hover, #close-cart-button:hover{
+#finish-buying:hover, #close-cart-button:hover, #continue-buying:hover{
     border: 3px solid #C7A505;
     color: #C7A505;
 }
