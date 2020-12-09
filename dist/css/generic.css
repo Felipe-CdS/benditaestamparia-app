@@ -140,11 +140,13 @@ header div a:hover, #navbar-phone a:hover{
 
 #navbar-phone-button {
     height: 50px;
-    width: 50px;
+    width: auto;
 
     padding: 0 10px;
     
     display: none;
+    align-items: center;
+    justify-content: space-around;
     
     background-color: transparent;
     border: 3px solid white;
@@ -158,10 +160,18 @@ header div a:hover, #navbar-phone a:hover{
     transition: 300ms;
 }
 
+#navbar-phone-button span{
+    width: auto;
+
+    color: white;
+    font-size: 1.5rem;
+    
+}
+
 #navbar-phone-button img{
     margin: auto;
     height: 70%;
-    width: 100%;
+    width: auto;
     position: relative;
     z-index: 3;
 }

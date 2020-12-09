@@ -272,7 +272,7 @@ and (max-device-width : 480px) {
 #photos-container .photo{
     width: 70%;
     height: 100%;
-    background-size: cover;
+    background-size: contain;
 }
 
 #next-photo, #last-photo {

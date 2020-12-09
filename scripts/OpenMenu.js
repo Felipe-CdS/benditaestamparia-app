@@ -1,9 +1,6 @@
 function openMenu() {
     
-    var navbarPhoneStyle = document.getElementById("navbar-phone");//.style.display;
-
-    console.log(navbarPhoneStyle);
-  
+    var navbarPhoneStyle = document.getElementById("navbar-phone");//.style.display;  
       if(navbarPhoneStyle.style.display == "flex"){ 
         navbarPhoneStyle.style.display = "none";
         document.getElementById("store-header").style.top = "5rem";

@@ -15,7 +15,7 @@ class Header extends React.Component {
                     <a href="#/contact-us">CONTATO</a>
                 </div>
 
-                <button id="navbar-phone-button"><img src="Assets/icons/bars-solid.svg"/></button>
+                <button id="navbar-phone-button"><span>MENU</span>&nbsp;<img src="Assets/icons/bars-solid.svg"/></button>
 
                 </header>
 
