@@ -9,7 +9,8 @@ export default (state = initialState, action) => {
             let checkSameProduct = false, duplicateIndex = 0;
 
             (state.cartArray).forEach(element => {
-                if(action.payload.productId == element.productId) {
+                if( action.payload.productId == element.productId &&
+                    action.payload.size == element.size) {
                     duplicateIndex = (state.cartArray).indexOf(element);
                     checkSameProduct = true;
                 }

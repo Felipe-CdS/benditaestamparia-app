@@ -28,7 +28,11 @@ class ProductCartCard extends React.Component {
         return(
         <div className="ProductCartCard">
             <div>   
-                <span>{this.props.products[this.props.index].quantity}x {this.props.products[this.props.index].name}</span>
+                <span className="product-info" style={{fontSize: "1rem"}}>
+                    {this.props.products[this.props.index].quantity}x &nbsp;
+                    {this.props.products[this.props.index].name} &nbsp;
+                    ({this.props.products[this.props.index].size})
+                </span>
                 <button id={`remove-${this.props.index}`} >Remover</button>
             </div>
             <span>R$ {this.subtotalCalcFunction()}</span>

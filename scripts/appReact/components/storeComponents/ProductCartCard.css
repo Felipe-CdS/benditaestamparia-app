@@ -14,10 +14,16 @@
 }
 
 .ProductCartCard div {
-    width: 20vw;  
+    width: auto; 
     display: flex;
     justify-content: flex-start;   
+    align-items: center;
 }
+
+.ProductCartCard div span{
+    width: 10rem;
+}
+
 
 .ProductCartCard div button {
     width: auto;
@@ -49,7 +55,14 @@ and (max-device-width : 480px) {
 /* Styles */
 
 .ProductCartCard div {
-    width: auto;   
+    width: auto; 
+    font-size: 0.8rem;  
+    
+}
+
+
+.ProductCartCard div .product-info {
+    font-size: 0.9rem;  
 }
 
 .ProductCartCard div span {

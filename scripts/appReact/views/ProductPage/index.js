@@ -35,14 +35,20 @@ class ProductPage extends React.Component {
             name: this.state.pageContent.name,
             price: this.state.pageContent.price,
             quantity: parseInt(document.getElementById("quantity-input").value), 
-            size: "M" 
+            size: document.getElementById("size-buttons").getElementsByClassName("selected")[0].innerHTML
         };
 
         this.props.dispatch(addProduct(newProduct));
     }
 
+    selectSize(){
+        document.getElementById("size-buttons").getElementsByClassName("selected")[0].classList.remove("selected");
+        this.classList.add("selected");
+    }
+
     componentDidMount(){
        document.getElementById("addToCartButton").addEventListener("click", () => this.addProduct());
+       (document.getElementById("size-buttons").childNodes).forEach(element => { element.addEventListener("click", this.selectSize) });
     }
 
 
@@ -63,6 +69,14 @@ class ProductPage extends React.Component {
                         <h1>{this.state.pageContent.name}</h1>
                         <h3>{`R$ ${this.state.pageContent.price}`}</h3>
                         <h5>{`10x R$ ${secondPriceCalc}`}</h5>
+                        <div id="size-buttons">
+                            <button className="selected">PP</button>
+                            <button>P</button>
+                            <button>M</button>
+                            <button>G</button>
+                            <button>GG</button>
+                            <button>XGG</button>
+                        </div>
                         <div>
                             <input type="number" id="quantity-input" step="1" min="1" max="100" defaultValue="1" name="product_quantity"/>
                             <button id="addToCartButton">INCLUIR NO CARRINHO</button>
