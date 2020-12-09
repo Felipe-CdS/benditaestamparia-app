@@ -4,6 +4,15 @@ import './styles.css'
 
 class HomePage extends React.Component {
 
+    scrollPage(){
+        console.log("ttest");
+        window.scrollTo(0, 600);
+    }
+
+    componentDidMount(){
+        document.getElementById("scroll-button").addEventListener("click", () => this.scrollPage());
+    }
+
     render(){
         return(
             <div>
@@ -13,7 +22,7 @@ class HomePage extends React.Component {
                     <h1>Cada tela conta uma história.</h1>
 
                     <h2>Nós estampamos para ter o prazer de ouvir cada uma delas.<br/><br/>
-                        <img className="arrow-down" src="Assets/icons/arrow-down-sign-to-navigate.svg"/>
+                        <button id="scroll-button"><img className="arrow-down" src="Assets/icons/arrow-down-sign-to-navigate.svg"/></button>
                     </h2>
                 </div>    
 

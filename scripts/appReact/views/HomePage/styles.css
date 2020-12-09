@@ -57,11 +57,17 @@ body {
     animation-duration: 2s;
 }
 
+#scroll-button {
+    background-color: transparent;
+    border: none;
+}
+
 .landing-container .arrow-down {
     height: 4.5rem;
     width: 4.5rem;
     color: white;
 
+    
 
     animation-name: opacity-animation;
     animation-duration: 3s;
