@@ -23,6 +23,7 @@ class StoreMainView extends React.Component {
         
         this.requestApi(location, this.state.apiString);
         this.state.productList = [<PlaceholderLoading />];
+        
     }
 
     async requestApi(apiString) {
@@ -49,7 +50,10 @@ class StoreMainView extends React.Component {
                 </a>
                 );
         });
+    }
 
+    componentDidMount(){
+        document.getElementById("navbar-phone").style.display = "none";
     }
 
     render(){
