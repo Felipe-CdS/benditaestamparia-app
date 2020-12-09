@@ -73,10 +73,11 @@
 .contact-us-container .left-side form input{
     width: 100%;
     font-size: 20px;
-    
 }
 
-.contact-us-container .left-side form textarea{  
+.contact-us-container .left-side form textarea{ 
+    height: 40vh; 
+    width: 70%;
     resize: none; 
     font-size: 15px; 
 }

@@ -32,11 +32,18 @@ class StoreCategory extends React.Component {
         this.state.productList = [<PlaceholderLoading />];
     }
 
+    componentDidMount(){
+        //just adjust loading gif to the middle
+        try{ document.getElementsByClassName("lds-ellipsis")[0].style.left = 0;}catch(e){}
+    }
+
     async requestApi(apiString) {
         var result = await axios.get(apiString).then(resp => resp.data);        
         this.setState({pageContent: result});
         this.setState({productList: []});
     }
+
+
 
     render(){
         (this.state.pageContent).map((data) => {

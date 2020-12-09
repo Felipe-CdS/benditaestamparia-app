@@ -25,7 +25,7 @@ class ContactUs extends React.Component {
                             <div className="name-container">
                                 <div>
                                     <label htmlFor="email">Email: *</label>
-                                    <input type="text" id="email" name="email"/>
+                                    <input type="email" id="email" name="email"/>
                                 </div>
                                 <div>
                                     <label htmlFor="phone">Telefone: *</label>
@@ -34,7 +34,7 @@ class ContactUs extends React.Component {
                             </div>
                 
                             <label htmlFor="idea-describe">Descreva a sua ideia:</label>
-                            <textarea rows="5" cols="20" id="idea-describe" name="idea-describe"></textarea>
+                            <textarea id="idea-describe" name="idea-describe"></textarea>
                             <input id="submit-button" type="submit" value="Enviar"/>
                         </form>
                     </div>
