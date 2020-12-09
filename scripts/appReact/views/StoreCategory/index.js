@@ -45,7 +45,7 @@ class StoreCategory extends React.Component {
 
             this.state.productList.push(
                 <a key={data.id} href={`#/store/id/${data.id}`}>
-                    <Product imgsrc={`./Assets/store/product-${data.id}/thumbnail.jpg`} 
+                    <Product imgsrc={`./Assets/store/product-${data.id}/0.jpg`} 
                     name={data.name} price={`R$ ${data.price}`} secondPrice={`10x R$ ${secondPriceCalc}`} />
                 </a>
                 );

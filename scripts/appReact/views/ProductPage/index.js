@@ -13,7 +13,8 @@ class ProductPage extends React.Component {
     state = {
         apiString: "https://benditaestamparia-api.herokuapp.com/api/products",
         pageContent: [],
-        categoryName: ""
+        categoryName: "", 
+        photoIndex: 0
     }
 
     constructor(props){
@@ -46,11 +47,25 @@ class ProductPage extends React.Component {
         this.classList.add("selected");
     }
 
-    componentDidMount(){
-       document.getElementById("addToCartButton").addEventListener("click", () => this.addProduct());
-       (document.getElementById("size-buttons").childNodes).forEach(element => { element.addEventListener("click", this.selectSize) });
+    nextPhoto(){
+        this.setState({photoIndex: ++this.state.photoIndex});
+
+        axios.get(`./Assets/store/product-${this.state.pageContent.id}/${this.state.photoIndex}.jpg`)
+                .then(resp => 
+                    document.getElementById("photo-1")
+                    .style.backgroundImage = `url(./Assets/store/product-${this.state.pageContent.id}/${this.state.photoIndex}.jpg)`)
+                .catch(error => {
+                    document.getElementById("photo-1")
+                    .style.backgroundImage = `url(./Assets/store/product-${this.state.pageContent.id}/0.jpg)`;
+                    this.setState({photoIndex: 0})
+                });
     }
 
+    componentDidMount(){
+        document.getElementById("next-photo").addEventListener("click", () => this.nextPhoto());
+        document.getElementById("addToCartButton").addEventListener("click", () => this.addProduct());
+       (document.getElementById("size-buttons").childNodes).forEach(element => { element.addEventListener("click", this.selectSize) });
+    }
 
     render(){
         this.state.pageContent.price = parseFloat(this.state.pageContent.price).toFixed(2);
@@ -62,7 +77,8 @@ class ProductPage extends React.Component {
                 <Cart />
                 <div className="product-container">
                     <div id="photos-container">
-                        <div className="photo" id="photo-one" style={{backgroundImage: `url(./Assets/store/product-${this.state.pageContent.id}/thumbnail.jpg)`}}/> 
+                        <div className="photo" id="photo-1" style={{backgroundImage: `url(./Assets/store/product-${this.state.pageContent.id}/0.jpg)`}}/> 
+                        <button id="next-photo"><img className="arrow-down" src="Assets/icons/arrow-down-sign-to-navigate.svg"/></button>
                     </div>
                     
                     <div className="product-information">
