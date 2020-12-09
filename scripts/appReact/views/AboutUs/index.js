@@ -4,6 +4,11 @@ import './styles.css'
 
 class AboutUs extends React.Component {
 
+    componentDidMount(){
+        window.scrollTo(0, 0);
+        document.getElementById("navbar-phone").style.display = "none";
+    }
+
     render(){
         return(
             <>

@@ -33,6 +33,8 @@ class StoreCategory extends React.Component {
     }
 
     componentDidMount(){
+        window.scrollTo(0, 0);
+        document.getElementById("navbar-phone").style.display = "none";
         //just adjust loading gif to the middle
         try{ document.getElementsByClassName("lds-ellipsis")[0].style.left = 0;}catch(e){}
     }

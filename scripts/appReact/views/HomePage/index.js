@@ -9,7 +9,9 @@ class HomePage extends React.Component {
         window.scrollTo(0, 600);
     }
 
-    componentDidMount(){
+    componentDidMount(){ 
+        window.scrollTo(0, 0);
+        document.getElementById("navbar-phone").style.display = "none";
         document.getElementById("scroll-button").addEventListener("click", () => this.scrollPage());
     }
 

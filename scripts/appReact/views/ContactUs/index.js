@@ -3,6 +3,12 @@ import React from 'react'
 import './styles.css'
 
 class ContactUs extends React.Component {
+
+    componentDidMount(){
+        window.scrollTo(0, 0);
+        document.getElementById("navbar-phone").style.display = "none";
+    }
+
     render(){
         return(
             <div className="contact-us-container">

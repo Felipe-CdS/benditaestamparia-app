@@ -62,6 +62,8 @@ class ProductPage extends React.Component {
     }
 
     componentDidMount(){
+        window.scrollTo(0, 0);
+        document.getElementById("navbar-phone").style.display = "none";   
         document.getElementById("next-photo").addEventListener("click", () => this.nextPhoto());
         document.getElementById("addToCartButton").addEventListener("click", () => this.addProduct());
        (document.getElementById("size-buttons").childNodes).forEach(element => { element.addEventListener("click", this.selectSize) });

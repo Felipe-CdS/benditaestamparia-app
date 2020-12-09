@@ -6,6 +6,11 @@ import './styles.css'
 
 class NotFound extends React.Component {
 
+    componentDidMount(){
+        window.scrollTo(0, 0);
+        document.getElementById("navbar-phone").style.display = "none";
+    }
+
     render(){
         return(
             <div className="category-container">   
