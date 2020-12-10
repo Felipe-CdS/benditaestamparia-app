@@ -1,0 +1,10 @@
+#receiptContainer {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+}
+
+#receiptContainer .receiptForm {
+    display: grid;
+    grid-template-columns: auto auto;
+}

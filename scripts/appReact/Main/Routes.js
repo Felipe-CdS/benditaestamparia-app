@@ -10,6 +10,7 @@ import StoreCategory from '../views/StoreCategory';
 import ProductPage from '../views/ProductPage';
 import NotFound from '../views/NotFound';
 import FinishBuying from '../views/FinishBuying';
+import Dashboard from '../views/Dashboard';
 
 class Routes extends React.Component {
     render(){
@@ -25,6 +26,7 @@ class Routes extends React.Component {
                     <Route exact path="/store" component={StoreMainView} />
                     <Route exact path="/contact-us" component={ContactUs} />
                     <Route exact path="/finish-buying" component={FinishBuying} />
+                    <Route exact path="/dashboard" component={Dashboard} />
                     <Route component={NotFound} />
                 </Switch>
             </HashRouter>
